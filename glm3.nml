@@ -1,19 +1,19 @@
 &glm_setup
-   sim_name = 'FCR'
+   sim_name = 'CCR'
    max_layers = 500
    min_layer_vol = 0.025
    min_layer_thick = 0.1
    max_layer_thick = 0.2
    non_avg = .true.
 /
-&wq_setup
-   wq_lib = 'aed'
-   wq_nml_file = 'aed/aed2_4zones.nml'
-   ode_method = 1
-   split_factor = 1
-   bioshade_feedback = .true.
-   repair_state = .true.
-/
+!&wq_setup
+!   wq_lib = 'aed'
+!   wq_nml_file = 'aed/aed2_4zones.nml'
+!   ode_method = 1
+!   split_factor = 1
+!   bioshade_feedback = .true.
+!   repair_state = .true.
+!/
 &light
    light_mode = 0
    n_bands = 4
@@ -33,18 +33,18 @@
    coef_mix_shreq = 0
 /
 &morphometry
-   lake_name = 'FallingCreek'
-   latitude = 37.30768
-   longitude = -79.83707
-   bsn_len = 711.699
-   bsn_wid = 226.03
-   bsn_vals = 31
-   H = 497.683, 497.983, 498.283, 498.683, 498.983, 499.283, 499.583, 499.883, 500.183, 500.483, 500.783, 501.083, 501.383, 501.683, 501.983, 502.283, 502.583, 502.883, 503.183, 503.483, 503.783, 504.083, 504.383, 504.683, 505.083, 505.383, 505.683, 505.983, 506.283, 506.583, 506.983
-   A = 0, 61.408883, 494.615572, 1201.23579, 2179.597283, 3239.620513, 4358.358439, 5637.911458, 6929.077352, 8228.697419, 9469.324081, 10811.30792, 12399.67051, 14484.22802, 16834.20941, 19631.05422, 22583.1399, 25790.70893, 28442.99667, 31155.95008, 36269.3312, 42851.13714, 51179.89109, 59666.85885, 68146.39437, 76424.14457, 85430.25429, 95068.47603, 103030.4489, 111302.1604, 119880.9164
+   lake_name = 'Carvins Cove'
+   latitude = 37.3697
+   longitude = -79.9580
+   bsn_len = 6850
+   bsn_wid = 410
+   bsn_vals = 47
+   H =  333.8, 334.0, 334.5, 335.0, 335.5, 336.0, 336.5, 337.0, 337.5, 338.0, 338.5, 339.0, 339.5, 340.0, 340.5, 341.0, 341.5, 342.0, 342.5, 343.0, 343.5, 344.0, 344.5, 345.0, 345.5, 346.0, 346.5, 347.0, 347.5, 348.0, 348.5, 349.0, 349.5, 350.0, 350.5, 351.0, 351.5, 352.0, 352.5, 353.0, 353.5, 354.0, 354.5, 355.0, 355.5, 356.0, 356.6
+   A = 832.8753,    1316.5687  ,  3004.3469,    5375.7605,   36432.3262  , 46207.3146   ,56751.0589,  150648.5232,  181127.9386,  215326.8664,  271102.4653, 295618.9069,  321263.0279,  369003.5078,  394811.7282,  424212.7850,  467897.0035,  499834.3843,  536283.3268,  609473.2497,  656924.3571,  710646.2363, 834604.9706,  882252.2505,  932422.2323, 1037367.7900, 1088260.2300, 1141185.6880, 1196144.1650, 1282035.5320, 1339068.1470, 1397119.0040, 1489489.5020, 1546227.1880, 1605104.8840, 1700678.7660, 1756631.3800, 1813972.3790, 1898335.7180, 1950833.1100, 2005412.7300, 2088696.4410, 2140008.9470, 2193459.4860, 2317486.3260, 2386760.2280, 2475798.9590
 /
 &time
    timefmt = 2
-   start = '2015-07-07 12:00:00'
+   start = '2021-03-29 12:00:00' !first day CCR met station was deployed 
    stop = '2021-12-31 12:00:00'
    dt = 3600
    num_days = 1
@@ -94,7 +94,7 @@
    time_fmt = 'YYYY-MM-DD hh:mm:ss'
 /
 &inflow
-   num_inflows = 2
+   num_inflows = 0
    names_of_strms = 'weir','SSS'
    subm_flag = .false., .true.
    strm_hf_angle = 55, -15
@@ -107,7 +107,7 @@
    inflow_vars = 'FLOW','TEMP','SALT','TRC_tr1','TRC_age','NCS_ss1','NCS_ss2','OXY_oxy','CAR_dic','CAR_pH','CAR_ch4','CAR_ch4_bub','SIL_rsi','NIT_amm','NIT_nit','PHS_frp','PHS_frp_ads','OGM_doc','OGM_poc','OGM_don','OGM_pon','OGM_dop','OGM_pop','OGM_docr','OGM_donr','OGM_dopr','OGM_cpom','PHY_cyano','PHY_cyano_IN','PHY_cyano_IP','PHY_green','PHY_green_IN','PHY_green_IP','PHY_diatom','PHY_diatom_IN','PHY_diatom_IP','BIV_filtfrac'
 /
 &outflow
-   num_outlet = 1
+   num_outlet = 0
    flt_off_sw = .false.
    outl_elvs = 506.9
    bsn_len_outl = 711.699
