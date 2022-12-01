@@ -80,7 +80,7 @@
    rad_mode = 1
    albedo_mode = 4
    cloud_mode = 4
-   meteo_fl = 'inputs/metCCR_21nov22.csv'! 'inputs/met_avg_filtered.csv' !these met data are from local met station at reservoir- SW is filtered to remove values outside of what the solar geometry allows, following Thomas et al. 2020 WRR
+   meteo_fl = 'inputs/metCCR_30nov22.csv'! 'inputs/met_avg_filtered.csv' !these met data are from local met station at reservoir- SW is filtered to remove values outside of what the solar geometry allows, following Thomas et al. 2020 WRR
    subdaily = .true.
    wind_factor = 1
    sw_factor = 1
